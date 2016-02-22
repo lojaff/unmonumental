@@ -1,7 +1,6 @@
 @import "less/lib/bootstrap/bootstrap";
 @import "less/lib/font-awesome/font-awesome";
 @import "less/lib/prefixer";
-@import "less/adhesion";
 @import "less/share-modal.less";
 
 // Global variables
@@ -62,7 +61,7 @@
 .btn.btn-blue,
 a.btn.btn-blue {
 	background: none;
-	background-color: #7598c9;
+	background-color: #000000;
 	border: none;
 	border-radius: 0;
 	line-height: 44px;
@@ -78,7 +77,7 @@ a.btn.btn-blue {
 	&:hover { opacity: 0.7; }
 	&:hover, &:active {
 		color: #fff;
-		background-color: #7598c9;
+		background-color: #324741;
 		background-position: auto;
 		.transition(none)
 	}
@@ -99,10 +98,9 @@ p {
 // -------------------------
 
 nav {
-	background-color: #e0e0e0;
+	
 	height: 46px;
 	overflow: hidden;
-	border-bottom: 2px solid #fff;
 
 	ul {
 	    list-style: none;
@@ -131,21 +129,51 @@ nav {
             position: absolute;
             right: 0;
             top: 0;
-            background-color: white;
+            background-color: none;
 
             span { margin-right: 20px; }
             a {
                 display: block;
                 height: 44px;
-                width: 44px;
-                text-indent: -999em;
-                background: url(@icon-sprite) no-repeat;
-                &:hover { opacity: .7; }
-            }
+                width: 44px;}
+
+               a:hover {
+				font-color:#fedd14; }
+            
+
+
             li { margin-left: 0; }
-            .facebook a { background-position: 0px -144px; }
-            .twitter a { background-position: 0px -96px; border-right:2px solid white;}
+            .facebook a {
+
+
+
+
+
+              }
+            .twitter a {
+
+
+
+
+              }
+            .fa {
+            	font-size:2em;
+            	line-height: 44px;
+            	margin-left:.5em; 
+            	color:#000000;
+
+            	
+
+            	
+
+ 
+
+            }
         }
+	}
+
+	.fa:hover { color: #fedd14;
+		
 	}
 
 	a,
@@ -191,14 +219,18 @@ header {
 	    font-size: 48px;
 	    color: #555;
 	    margin-bottom: 11px;
+
 	}
+
 	h2 {
-	    font-size: 15px;
-	    color: #666;
-	    margin: 0;
+	font-size: 24px;
 	}
+	
 }
 
+.wbez-logo svg {
+	margin:10px;
+}
 
 // Cube ad
 // -------------------------
@@ -227,9 +259,18 @@ header {
 // Content
 // -------------------------
 
-#content { margin-top: 44px; }
+#content { margin-top: 0px; }
 #story-meta {
-	margin-bottom: 22px;
+	margin-bottom: 0x;
+
+	h1 {
+	font-size: 36px;
+	}
+
+	h2 {
+	font-size: 24px;
+	
+	}
 
 	p {
 		font-size: 12px;
@@ -300,7 +341,7 @@ h1 + #story-meta { margin-top: -11px; }
 		background: @gray-light;
 		color: #fff;
 		text-align: center;
-		font-family: "Gotham SSm", @font-family-base;
+		font-family: @font-family-base;
 
 		&:after {
 			position: absolute;
@@ -335,9 +376,10 @@ h1 + #story-meta { margin-top: -11px; }
 // -------------------------
 
 footer {
-	padding: 0 15px 10px 15px;
-	font-size: 10px;
+	padding: 0px;
+	font-size: 11px;
 	border-top: 2px solid #e0e0e0;
+	font-color: ffffff;
 
 	ul {
 	    list-style: none;

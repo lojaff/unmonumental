@@ -44,4 +44,52 @@ var showCommentCount = function(count) {
     }
 }
 
+var onPageLoad = function() {
+    $('.section').css({
+      'opacity': 1,
+      'visibility': 'visible',
+    });
+};
+
+/*
+ * DInitialize fullpage.
+ */
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        verticalCentered: true,
+        controlArrows: true,
+        css3: true,
+        fixedElements: '#nav',
+        loopHorizontal: false,
+        autoScrolling: true,
+        keyboardScrolling: false,
+        scrollingSpeed: 0,
+        afterRender: onPageLoad,
+        onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+            var leavingSlide = $(this);
+            $.fn.fullpage.setScrollingSpeed(800);            
+        },
+        onLeave: function( index, nextIndex, direction){
+            var leavingSlide = $(this);
+            var scrollSpeed = 0;
+            console.log(index, nextIndex, direction)
+            if (index == 1 & nextIndex != 7) {
+                scrollSpeed = 800;
+            }
+            $.fn.fullpage.setScrollingSpeed(scrollSpeed);          
+        }
+    });
+
+    $('.start.btn').click(function(){
+        $.fn.fullpage.moveTo(2,0)
+    });
+
+    $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+
+
+
+
+
 $(onDocumentLoad);

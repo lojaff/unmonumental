@@ -1,8 +1,8 @@
+
 #!/usr/bin/env python
 
 """
 Project-wide application configuration.
-
 DO NOT STORE SECRETS, PASSWORDS, ETC. IN THIS FILE.
 They will be exposed to users. Use environment variables instead.
 See get_secrets() below for a fast way to access them.
@@ -37,22 +37,22 @@ ASSETS_SLUG = 'unmonumental'
 """
 DEPLOYMENT
 """
-PRODUCTION_S3_BUCKET = 'apps.npr.org'
+PRODUCTION_S3_BUCKET = 'unmonumentalrva.com'
 
-STAGING_S3_BUCKET = 'stage-apps.npr.org'
+STAGING_S3_BUCKET = 'unmonumentalrva.com'
 
-ASSETS_S3_BUCKET = 'assets.apps.npr.org'
+ASSETS_S3_BUCKET = 'unmonumentalrva.com'
 
 DEFAULT_MAX_AGE = 20
 
 RELOAD_TRIGGER = False
 RELOAD_CHECK_INTERVAL = 60
 
-PRODUCTION_SERVERS = ['cron.nprapps.org']
-STAGING_SERVERS = ['cron-staging.nprapps.org']
+PRODUCTION_SERVERS = ['unmonumentalrva.com']
+STAGING_SERVERS = ['unmonumentalrva.com']
 
 # Should code be deployed to the web/cron servers?
-DEPLOY_TO_SERVERS = False
+DEPLOY_TO_SERVERS = True
 
 SERVER_USER = 'ubuntu'
 SERVER_PYTHON = 'python2.7'
@@ -66,7 +66,7 @@ DEPLOY_CRONTAB = False
 
 # Should the service configurations be installed on the servers?
 # If True, DEPLOY_TO_SERVERS must also be True
-DEPLOY_SERVICES = False
+DEPLOY_SERVICES = True
 
 UWSGI_SOCKET_PATH = '/tmp/%s.uwsgi.sock' % PROJECT_FILENAME
 
@@ -91,7 +91,7 @@ DEBUG = True
 """
 COPY EDITING
 """
-COPY_GOOGLE_DOC_KEY = '1YHqxdFPKDPSgx4K-hrSaeQc_cMi7yP_LscnU6BXLqno'
+COPY_GOOGLE_DOC_KEY = '1gOG60bUtzRCimCNQ4rhx1I_eYDYcAp0Zej_DO-e-NRs'
 COPY_PATH = 'data/copy.xlsx'
 
 """
